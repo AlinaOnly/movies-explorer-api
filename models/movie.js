@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
+const { incorrectUrlMessage } = require('../utils/constsMessage');
 
 const movieSchema = new mongoose.Schema({
   country: {
@@ -26,24 +27,24 @@ const movieSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate: {
-      validator: (url) => validator.isURL(url),
-      message: 'Неправильная ссылка на постер',
+      validator: (value) => validator.isURL(value),
+      message: incorrectUrlMessage,
     },
   },
   trailerLink: {
     type: String,
     required: true,
     validate: {
-      validator: (url) => validator.isURL(url),
-      message: 'Неправильная ссылка на трейлер',
+      validator: (value) => validator.isURL(value),
+      message: incorrectUrlMessage,
     },
   },
   thumbnail: {
     type: String,
     required: true,
     validate: {
-      validator: (url) => validator.isURL(url),
-      message: 'Неправильная ссылка на постер к фильму',
+      validator: (value) => validator.isURL(value),
+      message: incorrectUrlMessage,
     },
   },
   owner: {

@@ -1,6 +1,6 @@
+const validator = require('validator');
 const { celebrate, Joi } = require('celebrate');
-
-const regEx = /^https?:\/\/(www\.)?.[\w\-.+[\]()_~:/%?#@!$&'*,;=]*$/;
+const { incorrectUrlMessage } = require('../utils/constsMessage');
 
 module.exports.createUserValidation = celebrate({
   body: Joi.object().keys({
@@ -24,9 +24,24 @@ module.exports.createMovieValidation = celebrate({
     duration: Joi.number().required(),
     year: Joi.string().required(),
     description: Joi.string().required(),
-    image: Joi.string().required().pattern(regEx),
-    trailerLink: Joi.string().required().pattern(regEx),
-    thumbnail: Joi.string().required().pattern(regEx),
+    image: Joi.string().required().custom((value, helpers) => {
+      if (validator.isURL(value)) {
+        return value;
+      }
+      return helpers.message(incorrectUrlMessage);
+    }),
+    trailerLink: Joi.string().required().custom((value, helpers) => {
+      if (validator.isURL(value)) {
+        return value;
+      }
+      return helpers.message(incorrectUrlMessage);
+    }),
+    thumbnail: Joi.string().required().custom((value, helpers) => {
+      if (validator.isURL(value)) {
+        return value;
+      }
+      return helpers.message(incorrectUrlMessage);
+    }),
     movieId: Joi.number().required(),
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
