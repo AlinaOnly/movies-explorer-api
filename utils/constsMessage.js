@@ -22,6 +22,8 @@ const connectMessage = 'Connected to mongodb';
 const authNeedMessage = 'Необходима авторизация';
 const tokenErrMessage = 'Неверный токен';
 
+const serverErrorMessage = 'Ошибка на сервере';
+
 // const regEx = /^https?:\/\/(www\.)?.[\w\-.+[\]()_~:/%?#@!$&'*,;=]*$/;
 
 module.exports = {
@@ -44,4 +46,5 @@ module.exports = {
   authNeedMessage,
   tokenErrMessage,
   incorrectEmailMessage,
+  serverErrorMessage,
 };
