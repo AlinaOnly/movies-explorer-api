@@ -1,4 +1,5 @@
 const corsList = [
+  'https://api.nomoreparties.co/beatfilm-movies',
   'https://api.trenikovamovies.nomoredomains.icu',
   'http://api.trenikovamovies.nomoredomains.icu',
   'https://trenikovamovies.nomoredomains.icu',
