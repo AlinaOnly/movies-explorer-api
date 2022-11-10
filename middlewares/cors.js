@@ -14,7 +14,7 @@ const corsOptions = (req, res, next) => {
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
   if (corsList.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', null);
+    res.header('Access-Control-Allow-Origin', origin);
     res.header('Access-Control-Allow-Credentials', true);
   }
   if (method === 'OPTIONS') {
