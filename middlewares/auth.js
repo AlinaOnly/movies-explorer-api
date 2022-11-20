@@ -6,21 +6,25 @@ const UnauthorizedError = require('../errors/unauthorized-err');
 const { authNeedMessage, tokenErrMessage } = require('../utils/constsMessage');
 
 module.exports = (req, res, next) => {
-  const cookie = req.cookies;
+  // const cookie = req.cookies;
+  const token = req.cookies.jwt;
 
-  if (!cookie) {
+  if (!token) {
     throw new UnauthorizedError(authNeedMessage);
   }
-  const token = cookie.jwt;
+
   let payload;
 
   try {
-    payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');
+    payload = jwt.verify(
+      token,
+      NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
+    );
+    if (payload) {
+      req.user = payload;
+    }
   } catch (err) {
-    throw new UnauthorizedError(tokenErrMessage);
+    throw new UnauthorizedError(`${tokenErrMessage} ${err}`);
   }
-
-  req.user = payload;
-
   next();
 };
