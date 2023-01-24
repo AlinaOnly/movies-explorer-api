@@ -12,3 +12,4 @@ Movies Api -  последняя часть дипломного проекта 
 
 * Публичный IP 51.250.67.205
 * [Ссылка на мой API](https://api.trenikovamovies.nomoredomains.icu)
+* [Клонирование репозитория](https://github.com/AlinaOnly/movies-explorer-api.git)
