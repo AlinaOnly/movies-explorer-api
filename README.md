@@ -11,4 +11,4 @@ Movies Api -  последняя часть дипломного проекта 
 ## Функциональность: Node.js, Express.js, MongoDB, mongoose, CORS, helmet, celebrate, JOI, winston, express-winston, bycript.js, express-rate-limit, dotenv, API, JSON.
 
 * Публичный IP 51.250.67.205
-* Ссылка https://api.trenikovamovies.nomoredomains.icu
+* [Ссылка на мой API](https://api.trenikovamovies.nomoredomains.icu)
