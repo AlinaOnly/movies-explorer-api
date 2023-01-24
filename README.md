@@ -8,8 +8,23 @@ Movies Api -  последняя часть дипломного проекта 
 Для сохранения фильмов и пользователей используется мой API. 
 Для поиска фильмов - [сторонний API](https://api.nomoreparties.co/beatfilm-movies)
 
-## Функциональность: Node.js, Express.js, MongoDB, mongoose, CORS, helmet, celebrate, JOI, winston, express-winston, bycript.js, express-rate-limit, dotenv, API, JSON.
+## Функциональность: 
+* Node.js
+* Express.js
+* MongoDB
+* mongoose
+* CORS
+* helmet 
+* celebrate
+* JOI
+* winston 
+* express-winston 
+* bycript.js 
+* express-rate-limit
+* dotenv
+* API
+* JSON
 
 * Публичный IP 51.250.67.205
 * [Ссылка на мой API](https://api.trenikovamovies.nomoredomains.icu)
-* [Клонирование репозитория](https://github.com/AlinaOnly/movies-explorer-api.git)
+* Клонирование репозитория - https://github.com/AlinaOnly/movies-explorer-api.git
