@@ -1,4 +1,4 @@
-# movies-explorer-api
+# Movies-Explorer-Api
 
 Movies Api -  последняя часть дипломного проекта на курсе по Веб-Разработке от Яндекс.Практикума.
 
